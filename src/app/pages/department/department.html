@@ -1,1 +1,84 @@
-<p>department works!</p>
+<div class="container mt-5">
+  <!-- Card -->
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white">
+      <h4 class="mb-0">Department Master</h4>
+    </div>
+
+    <div class="card-body">
+      <!-- Form Row -->
+      <div class="row align-items-end">
+        <!-- Department Name -->
+        <div class="col-md-3">
+          <label class="form-label fw-semibold">Department Name</label>
+          <input
+            type="text"
+            [(ngModel)]="newDeptObj.departmentName"
+            class="form-control"
+            placeholder="Enter Department Name"
+          />
+        </div>
+
+        <!-- Is Active Checkbox -->
+        <div class="col-md-2">
+          <div class="form-check mt-4">
+            <input
+              class="form-check-input"
+              [(ngModel)]="newDeptObj.isActive"
+              type="checkbox"
+              id="isActive"
+            />
+            <label class="form-check-label fw-semibold" for="isActive"> Is Active </label>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="col-md-3">
+          <button class="btn btn-success me-2">Save</button>
+          <button class="btn btn-secondary">Reset</button>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+
+      <!-- Table -->
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>Department Name</th>
+              <th>Is Active</th>
+              <th width="150">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>HR</td>
+              <td>
+                <span class="badge bg-success">Active</span>
+              </td>
+              <td>
+                <button class="btn btn-sm btn-warning">Edit</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>IT</td>
+              <td>
+                <span class="badge bg-danger">Inactive</span>
+              </td>
+              <td>
+                <button class="btn btn-sm btn-warning">Edit</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
