@@ -1,0 +1,47 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(180deg, #343a40, #212529);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar-header {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.toggle-btn {
+  border: none;
+}
+
+.sidebar .nav-link {
+  color: #adb5bd;
+  padding: 12px 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.sidebar .nav-link:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  padding-left: 25px;
+}
+
+.sidebar i {
+  width: 20px;
+  text-align: center;
+}
+
+.logout {
+  color: #dc3545 !important;
+}
+
+.content {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
